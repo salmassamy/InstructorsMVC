@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Day2Task.Models.Instructor>
+
+@{
+    ViewData["Title"] = "Instructors List";
+}
+
+<h1>Instructors List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Address</th>
+            <th>Department</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Salary.ToString("C")</td>
+                    <td>@item.Address</td>
+                    <td>@item.Department?.Name</td>
+                    <td>@item.Course?.Name</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
