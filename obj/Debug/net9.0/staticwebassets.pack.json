@@ -5,12 +5,44 @@
       "PackagePath": "staticwebassets\\Day2Task.9d1whrpiq5.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\assets\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\assets\\img\\about-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\about-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\assets\\img\\contact-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\contact-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\assets\\img\\home-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\assets\\img\\post-bg.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\post-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\assets\\img\\post-sample-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\post-sample-image.jpg"
+    },
+    {
       "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\css\\styles.css",
+      "PackagePath": "staticwebassets\\css\\styles.css"
+    },
+    {
       "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "C:\\Users\\Salma\\source\\repos\\Day2Task\\Day2Task\\wwwroot\\js\\site.js",

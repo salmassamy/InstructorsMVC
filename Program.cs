@@ -1,39 +1,62 @@
+using Day2Task.Data;
 using Day2Task.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Day2Task
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+
+// ITIContext ··»Ì«‰«  «·ﬁœÌ„…
+builder.Services.AddDbContext<ITIContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ITIConnection")));
+
+// ApplicationDbContext ··‹ Identity
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ITIConnection")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequiredLength = 6;
+})
+.AddEntityFrameworkStores<ApplicationDbContext>();
 
-            // Add services to the container.
-            builder.Services.AddControllersWithViews();
+// Session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
-            // Add DbContext
-            builder.Services.AddDbContext<ITIContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("ITIConnection")));
+var app = builder.Build();
 
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.MapStaticAssets();
-            app.MapControllerRoute(
-                name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
-                .WithStaticAssets();
-
-            app.Run();
-        }
-    }
+// Configure the HTTP request pipeline.
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseStaticFiles();
+
+app.UseRouting();
+
+// Authentication & Authorization
+app.UseAuthentication();
+app.UseAuthorization();
+
+// Session
+app.UseSession();
+
+// Default Route
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.Run();
+

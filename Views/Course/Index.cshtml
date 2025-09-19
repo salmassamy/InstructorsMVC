@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<Day2Task.Models.Course>
+
+@{
+    ViewData["Title"] = "Courses List";
+    Layout = "_TempLayout1";
+}
+<div style="text-align: center;">
+<h1>Courses List</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Add New Course</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Hours</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+                <tr>
+                    <td>@course.Id</td>
+                    <td>@course.Name</td>
+                    <td>@course.Hours</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@course.Id" class="btn btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@course.Id" class="btn btn-warning">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@course.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Day2Task.Models.Trainee>
+
+@{
+    ViewData["Title"] = "Trainees List";
+    Layout = "_TempLayout1";
+}
+<div style="text-align: center;">
+<h1 >Trainees List</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trainee in Model)
+        {
+                <tr>
+                    <td>@trainee.Id</td>
+                    <td>@trainee.Name</td>
+                    <td>@trainee.Grade</td>
+                    <td>@trainee.Department?.Name</td>
+                    <td>
+                        <a asp-action="ShowTraineeResult" asp-route-traineeId="@trainee.Id" class="btn btn-info">Results</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
+</div>
+

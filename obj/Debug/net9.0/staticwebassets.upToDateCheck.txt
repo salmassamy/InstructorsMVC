@@ -1,5 +1,6 @@
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\js\scripts.js
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
@@ -40,6 +41,7 @@ C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\js\boot
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\assets\favicon.ico
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
@@ -50,6 +52,7 @@ C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\js\boot
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\jquery-validation\LICENSE.md
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\jquery\dist\jquery.min.map
+C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\css\styles.css
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
@@ -60,8 +63,16 @@ C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\jquery\dist\jquery.js
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
 C:\Users\Salma\source\repos\Day2Task\Day2Task\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+wwwroot\assets\favicon.ico
+wwwroot\assets\img\about-bg.jpg
+wwwroot\assets\img\contact-bg.jpg
+wwwroot\assets\img\home-bg.jpg
+wwwroot\assets\img\post-bg.jpg
+wwwroot\assets\img\post-sample-image.jpg
 wwwroot\css\site.css
+wwwroot\css\styles.css
 wwwroot\favicon.ico
+wwwroot\js\scripts.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

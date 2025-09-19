@@ -67,66 +67,22 @@ namespace Day2Task.Migrations
         }
 
         /// <inheritdoc />
+
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DeleteData(
-                table: "Courses",
-                keyColumn: "Id",
-                keyValue: 2);
+            // احذف الأول الـ dependent data
+            migrationBuilder.Sql("DELETE FROM CrsResults");
+            migrationBuilder.Sql("DELETE FROM Instructors");
+            migrationBuilder.Sql("DELETE FROM Trainees");
+            migrationBuilder.Sql("DELETE FROM Courses");
+            migrationBuilder.Sql("DELETE FROM Departments");
 
-            migrationBuilder.DeleteData(
-                table: "CrsResults",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "CrsResults",
-                keyColumn: "Id",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Instructors",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Instructors",
-                keyColumn: "Id",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Courses",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Courses",
-                keyColumn: "Id",
-                keyValue: 3);
-
-            migrationBuilder.DeleteData(
-                table: "Trainees",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Trainees",
-                keyColumn: "Id",
-                keyValue: 2);
-
-            migrationBuilder.DeleteData(
-                table: "Departments",
-                keyColumn: "Id",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Departments",
-                keyColumn: "Id",
-                keyValue: 2);
-
+            // ولو كنت ضايف عمود Manager في Departments، لازم يتشال برضه
             migrationBuilder.DropColumn(
                 name: "Manager",
                 table: "Departments");
         }
+
+
     }
 }

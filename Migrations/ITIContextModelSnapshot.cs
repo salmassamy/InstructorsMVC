@@ -35,11 +35,19 @@ namespace Day2Task.Migrations
                     b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Hours")
+                        .HasColumnType("int");
+
                     b.Property<int>("MinDegree")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
@@ -53,6 +61,7 @@ namespace Day2Task.Migrations
                             Id = 1,
                             Degree = 100,
                             DepartmentId = 1,
+                            Hours = 0,
                             MinDegree = 50,
                             Name = "C#"
                         },
@@ -61,6 +70,7 @@ namespace Day2Task.Migrations
                             Id = 2,
                             Degree = 100,
                             DepartmentId = 1,
+                            Hours = 0,
                             MinDegree = 60,
                             Name = "OOP"
                         },
@@ -69,6 +79,7 @@ namespace Day2Task.Migrations
                             Id = 3,
                             Degree = 100,
                             DepartmentId = 2,
+                            Hours = 0,
                             MinDegree = 50,
                             Name = "Java SE"
                         });
